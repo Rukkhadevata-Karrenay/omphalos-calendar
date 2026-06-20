@@ -1,0 +1,29 @@
+{
+  "name": "omphalos-year-calendar",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "generate:uniform-buttons-all": "node scripts/generate-all-month-uniform-buttons.mjs",
+    "check:assets": "node scripts/check-assets-usage.mjs",
+    "check:date-buttons": "node scripts/check-all-month-uniform-buttons.mjs",
+    "check:uniform-buttons-all": "node scripts/check-all-month-uniform-buttons.mjs",
+    "check:fiveweek-panel": "node scripts/generate-fiveweek-clean-panel.mjs --check",
+    "test:time": "tsx scripts/omphalos-time-boundary.ts",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0",
+    "vite": "^7.0.0"
+  }
+}

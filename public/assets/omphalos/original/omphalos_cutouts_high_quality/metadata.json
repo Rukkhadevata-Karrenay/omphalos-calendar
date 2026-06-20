@@ -1,0 +1,212 @@
+[
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/00-demiurge.png",
+    "source": "45C2B1A4-2AA1-4F57-A7F9-7E40BCC90472.jpeg",
+    "box": [
+      115,
+      103,
+      765,
+      712
+    ],
+    "output_size": [
+      651,
+      610
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/00-cyrene.png",
+    "source": "45C2B1A4-2AA1-4F57-A7F9-7E40BCC90472.jpeg",
+    "box": [
+      115,
+      808,
+      765,
+      1193
+    ],
+    "output_size": [
+      651,
+      386
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/00-title-calendar.png",
+    "source": "45C2B1A4-2AA1-4F57-A7F9-7E40BCC90472.jpeg",
+    "box": [
+      115,
+      1242,
+      765,
+      1447
+    ],
+    "output_size": [
+      651,
+      206
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/01-门关月-Tribios.png",
+    "source": "F8138749-B3B2-405B-9805-361F5E13837B.png",
+    "box": [
+      311,
+      224,
+      2060,
+      1056
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/02-平衡月-Cerdra.png",
+    "source": "F8138749-B3B2-405B-9805-361F5E13837B.png",
+    "box": [
+      309,
+      1166,
+      2056,
+      1995
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/03-长夜月-Evernight.png",
+    "source": "F8138749-B3B2-405B-9805-361F5E13837B.png",
+    "box": [
+      309,
+      2125,
+      2056,
+      2954
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/04-耕耘月-DanHeng.png",
+    "source": "F8138749-B3B2-405B-9805-361F5E13837B.png",
+    "box": [
+      312,
+      3065,
+      2059,
+      3896
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/05-欢喜月-Helektra.png",
+    "source": "49BD38FC-6237-4B2F-9D1C-B3586D573A26.png",
+    "box": [
+      312,
+      224,
+      2059,
+      1056
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/06-长昼月-Hyacinthia.png",
+    "source": "49BD38FC-6237-4B2F-9D1C-B3586D573A26.png",
+    "box": [
+      309,
+      1166,
+      2056,
+      1995
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/07-自由月-Khaslana.png",
+    "source": "49BD38FC-6237-4B2F-9D1C-B3586D573A26.png",
+    "box": [
+      309,
+      2125,
+      2056,
+      2955
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/08-收获月-Anaxagoras.png",
+    "source": "49BD38FC-6237-4B2F-9D1C-B3586D573A26.png",
+    "box": [
+      312,
+      3065,
+      2059,
+      3896
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/09-拾线月-Aglaea.png",
+    "source": "8D0F2C21-6945-455D-BB0D-DFD250C9A0AB.png",
+    "box": [
+      312,
+      224,
+      2059,
+      1056
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/10-纷争月-Mydeimos.png",
+    "source": "8D0F2C21-6945-455D-BB0D-DFD250C9A0AB.png",
+    "box": [
+      309,
+      1166,
+      2056,
+      1995
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/11-哀悼月-Castorice.png",
+    "source": "8D0F2C21-6945-455D-BB0D-DFD250C9A0AB.png",
+    "box": [
+      309,
+      2125,
+      2056,
+      2955
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  },
+  {
+    "file": "/mnt/data/omphalos_cutouts/cards/12-机缘月-Cifera.png",
+    "source": "8D0F2C21-6945-455D-BB0D-DFD250C9A0AB.png",
+    "box": [
+      312,
+      3064,
+      2059,
+      3896
+    ],
+    "output_size": [
+      1749,
+      833
+    ]
+  }
+]
