@@ -45,7 +45,8 @@ npm run preview
 
 ## 线上预览
 
-Vercel: https://omphalos-calendar.vercel.app
+- 海外访问 / International: https://omphalos-calendar.vercel.app
+- 中国大陆访问 / Mainland China mirror: https://omphalos-calendar-omphalos-calendar-d2dtch7e804ee9.webapps.tcloudbase.com/
 
 翁法罗斯时间边界示例：
 
