@@ -17,6 +17,7 @@ import {
   getOmphalosDayEvent,
 } from './data/omphalosSpecialDays';
 import { useEvents } from './hooks/useEvents';
+import { useCurrentTime } from './hooks/useCurrentTime';
 import { formatDate, getOmphalosDate, toDateKey } from './utils/date';
 
 type Route =
@@ -60,14 +61,9 @@ const getRouteMonth = (route: Route, now: Date): OmphalosMonth => {
 
 export default function App() {
   const [route, setCurrentRoute] = useState<Route>(() => parseRoute());
-  const [now, setNow] = useState(() => new Date());
+  const now = useCurrentTime();
   const [selectedDateKey, setSelectedDateKey] = useState<string | null>(null);
   const { events, eventsByDate, addEvent, updateEvent, deleteEvent } = useEvents();
-
-  useEffect(() => {
-    const timer = window.setInterval(() => setNow(new Date()), 1000);
-    return () => window.clearInterval(timer);
-  }, []);
 
   useEffect(() => {
     const onHashChange = () => setCurrentRoute(parseRoute());
@@ -149,6 +145,7 @@ export default function App() {
 
       {route.view === 'year' ? (
         <YearOverview
+          now={now}
           year={year}
           events={events}
           onSelectMonth={(month) => setRoute({ view: 'month', monthOrder: month.order })}

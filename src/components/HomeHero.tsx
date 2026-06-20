@@ -1,6 +1,7 @@
 import { OMPHALOS_HOME_IMAGE } from '../data/omphalosMonths';
+import { getOracleBackground } from '../data/oracleBackgrounds';
 import type { CalendarEvent } from '../types/event';
-import { formatDateTime, getOmphalosDate } from '../utils/date';
+import { formatDateTime, getOmphalosDate, toDateKey } from '../utils/date';
 import { getDailyQuote } from '../utils/dailyQuote';
 import { getCurrentOmphalosTime } from '../utils/omphalosTime';
 import { EventList } from './EventList';
@@ -17,6 +18,7 @@ export const HomeHero = ({ now, todayEvents, onOpenYear, onOpenCurrentMonth }: H
   const omphalosDate = getOmphalosDate(now);
   const dailyQuote = getDailyQuote(now, omphalosDate.month.order);
   const omphalosTime = getCurrentOmphalosTime(now);
+  const oracleBackground = getOracleBackground(dailyQuote.speaker, `${toDateKey(now)}:${dailyQuote.id}`);
 
   return (
     <main className="home-layout">
@@ -47,7 +49,15 @@ export const HomeHero = ({ now, todayEvents, onOpenYear, onOpenCurrentMonth }: H
           </div>
         </article>
         <OmphalosClock now={now} todayEvents={todayEvents} />
-        <article className="glass-panel daily-oracle" style={{ borderColor: omphalosDate.month.color }}>
+        <article
+          className="glass-panel daily-oracle"
+          style={
+            {
+              '--oracle-bg': `url(${oracleBackground})`,
+              borderColor: omphalosDate.month.color,
+            } as React.CSSProperties
+          }
+        >
           <div className="oracle-header">
             <span className="eyebrow">今日神谕</span>
           </div>

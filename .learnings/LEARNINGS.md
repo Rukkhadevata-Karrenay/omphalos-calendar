@@ -27,6 +27,33 @@
 
 ---
 
+## [LRN-20260621-001] correction
+
+**Logged**: 2026-06-21T01:22:00+08:00
+**Priority**: high
+**Status**: resolved
+**Area**: frontend
+
+### Summary
+首页图下安全面板必须由实际碰撞临界点触发，不能把整个移动端断点都改成图文分离。
+
+### Details
+首版把 `max-width: 768px` 全部改为完整图片加独立文字面板，导致 569px 等仍有安全空间的视口也失去封面内叠加效果。用户要求在不重叠时保留图内文案，仅在真正窄屏时移到图片下方。
+
+### Suggested Action
+响应式视觉修复先测量临界宽度；宽屏保留原构图，窄屏 fallback 使用独立安全面板。本项目首页当前临界断点为 480px。
+
+### Metadata
+- Source: user_feedback
+- Related Files: src/App.css, scripts/home-hero-responsive.test.ts
+- Tags: responsive, breakpoint, hero, progressive-fallback
+
+### Resolution
+- **Resolved**: 2026-06-21T01:24:00+08:00
+- **Notes**: 390/430/480px 使用安全面板，481/569/768/1280px 保留图内叠加。
+
+---
+
 ## [LRN-20260618-001] correction
 
 **Logged**: 2026-06-18T15:00:00+08:00

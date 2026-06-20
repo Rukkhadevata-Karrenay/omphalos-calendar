@@ -26,6 +26,88 @@
 
 ---
 
+## [ERR-20260621-002] tsx-react-server-render
+
+**Logged**: 2026-06-21T01:18:00+08:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+直接用 tsx 服务端渲染现有 JSX 组件时，组件依赖的经典 React 全局未注入。
+
+### Error
+`ReferenceError: React is not defined`
+
+### Suggested Fix
+回归脚本先显式注入 React，再动态导入 JSX 组件，确保失败落在业务断言而不是测试装载。
+
+### Metadata
+- Reproducible: yes
+- Related Files: scripts/oracle-backgrounds.test.ts
+
+### Resolution
+- **Resolved**: 2026-06-21T01:19:00+08:00
+- **Notes**: 动态导入后测试正确捕获旧总览图问题。
+
+---
+
+## [ERR-20260621-003] browser-evaluate-template-escaping
+
+**Logged**: 2026-06-21T01:25:00+08:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+浏览器求值代码嵌入外层模板字符串时再次使用反引号，导致验证脚本解析失败。
+
+### Error
+`SyntaxError: Unexpected identifier 'url'`
+
+### Suggested Fix
+嵌套浏览器求值代码避免反引号，字符串比较使用普通拼接。
+
+### Metadata
+- Reproducible: yes
+- Related Files: browser validation snippet
+
+### Resolution
+- **Resolved**: 2026-06-21T01:26:00+08:00
+- **Notes**: 改为 `"url(" + src + ")"` 后完成背景一致性检查。
+
+---
+
+## [ERR-20260621-001] browser-networkidle
+
+**Logged**: 2026-06-21T01:07:00+08:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+应用内浏览器文档列出 `networkidle`，但当前运行时不支持该等待状态。
+
+### Error
+`playwright_wait_for_load_state does not support networkidle`
+
+### Context
+- 在本地 Vite 首页响应式验收前等待页面完成加载。
+- 页面本身已正常打开，错误只来自浏览器自动化等待参数。
+
+### Suggested Fix
+本地静态/Vite 页面使用 `load`，再用目标 DOM、图片 naturalWidth 与控制台日志做定向就绪检查。
+
+### Metadata
+- Reproducible: yes
+- Related Files: browser plugin runtime
+
+### Resolution
+- **Resolved**: 2026-06-21T01:08:00+08:00
+- **Notes**: 改用 `load` 后完成 390/414/430/768/1280px 验收。
+
+---
+
 ## [ERR-20260620-005] release-preview-sandbox-and-browser-scope
 
 **Logged**: 2026-06-20T22:55:00+08:00
