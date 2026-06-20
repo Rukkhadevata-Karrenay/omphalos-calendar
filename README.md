@@ -1,13 +1,21 @@
 # 翁法罗斯一年历
 
-一个以《崩坏：星穹铁道》翁法罗斯一年历为主题的本地网页日历软件。它不是普通日历，而是一个“翁法罗斯拟态时间系统”：现实月份映射为翁法罗斯月份，现实时间映射为 5 个时段与 25 刻。
+一个以《崩坏：星穹铁道》翁法罗斯一年历为主题的本地网页日历软件。它是一个“翁法罗斯拟态时间系统”：现实月份映射为翁法罗斯月份，现实时间映射为 5 个时段与 25 刻。
+
+## 作者与署名
+
+- 网站作者 / 设计与开发：Karrenay Rukkhadevata（GitHub: `Rukkhadevata-Karrenay`）
+- 一年历总览图来源：Ankiiy_Nymity（全平台同名）
+- 总览图仅用于本非商业粉丝项目的学习、展示与个人使用；未经原作者允许，请勿二次使用、转载或商用。
 
 ## 版权与用途说明
 
 - 本项目为非官方粉丝作品，仅用于学习、展示与个人使用。
 - 本项目不隶属于 HoYoverse / miHoYo。
 - 本项目不用于商业用途。
-- 游戏相关名称、设定与素材版权归原权利方所有。
+- 网站代码、页面组织与交互实现由 Karrenay Rukkhadevata 制作。
+- 一年历总览图来源为 Ankiiy_Nymity（全平台同名），请勿脱离本项目二次使用。
+- 游戏相关名称、设定、角色与原始素材版权归原权利方所有。
 
 ## 技术栈
 
@@ -37,7 +45,7 @@ npm run preview
 
 ## 线上预览
 
-Vercel: 待部署
+Vercel: https://omphalos-calendar.vercel.app
 
 翁法罗斯时间边界示例：
 
@@ -60,12 +68,19 @@ npm run test:time
 - 一天分为 5 个时段，每个时段 5 刻。
 - 每刻约 57 分 36 秒。
 
-## 素材来源与用途
+## 素材来源、署名与用途
 
 素材来自本机目录：
 
 ```text
 /Users/Karrenay/Desktop/翁法罗斯一年历-素材/
+```
+
+公开署名信息：
+
+```text
+网站作者 / 设计与开发：Karrenay Rukkhadevata
+一年历总览图来源：Ankiiy_Nymity（全平台同名）
 ```
 
 项目内素材目录：
@@ -91,8 +106,8 @@ public/assets/omphalos/
 主要映射：
 
 - `overview/time-periods.jpg`：翁法罗斯历法与一天内时间称呼参考。
-- `overview/home-omphalos-year.jpg`：首页原始视觉参考。
-- `overview/home-omphalos-year-clean.jpg`：首页实际使用封面，底部原图文字与按钮区域通过模糊方式弱化，React 负责叠加真实文案和按钮。
+- `overview/home-omphalos-year.jpg`：首页原始视觉参考；一年历总览图来源为 Ankiiy_Nymity（全平台同名）。
+- `overview/home-omphalos-year-clean.jpg`：首页实际使用封面，底部原图文字与按钮区域通过模糊方式弱化，React 负责叠加真实文案和按钮；一年历总览图来源为 Ankiiy_Nymity（全平台同名）。
 - `eggs/xilian-demiurge-card.png`：一年历总览顶部的昔涟 / 德谬歌完整卡图。
 - `preview/month-preview-reference-01.jpg` 到 `month-preview-reference-05.jpg`：一年历总览页的月份预览风格参考。
 - `months/01-janus-gate-month.jpg` 到 `months/12-zagreus-chance-month.jpg`：12 个月份详情页主题图。
@@ -149,6 +164,11 @@ python3 scripts/generate-date-button-assets.py
 代码入口为 `src/data/dailyQuotes.ts`。首页会按当前日期和翁法罗斯月份稳定选择一条语句；同一天刷新不变，第二天自动更换。通用黄金裔语句统一署名为“无名黄金裔”，首页不显示类型标签。
 
 待办颜色入口为 `src/data/eventColors.ts`。日程仍使用 `CalendarEvent.color` 字符串保存，不迁移旧 localStorage 数据；黄紫选项使用左上黄、右下紫的整格渐变。
+
+## 鸣谢
+
+- 感谢 Ankiiy_Nymity 提供一年历总览图授权与视觉参考支持。
+- 本项目为个人学习与非商业展示作品，若任何素材署名、授权范围或展示方式需要调整，请联系项目作者处理。
 
 ## 关键目录
 
