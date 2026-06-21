@@ -28,7 +28,7 @@ export const OMPHALOS_PREVIEW_REFERENCES = [
 ];
 
 export const OMPHALOS_HOME_IMAGE = '/assets/omphalos/overview/home-omphalos-year-original.jpg';
-export const OMPHALOS_YEAR_OVERVIEW_IMAGE = '/assets/omphalos/eggs/xilian-demiurge-card.png';
+export const OMPHALOS_YEAR_OVERVIEW_IMAGE = '/assets/omphalos/eggs/xilian-demiurge-card.jpg';
 export const OMPHALOS_TIME_PERIOD_IMAGE = '/assets/omphalos/overview/time-periods.jpg';
 
 export const OMPHALOS_TIME_WIDGET_IMAGES = {

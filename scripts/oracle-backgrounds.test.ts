@@ -3,6 +3,7 @@ import { access } from 'node:fs/promises';
 import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { dailyQuotes } from '../src/data/dailyQuotes';
+import { OMPHALOS_YEAR_OVERVIEW_IMAGE } from '../src/data/omphalosMonths';
 import { getOmphalosDate, toDateKey } from '../src/utils/date';
 import { getDailyQuote } from '../src/utils/dailyQuote';
 
@@ -97,8 +98,13 @@ assert.ok(
   '一年历总览背景应使用当天神谕 speaker 对应的 oracle 图片',
 );
 assert.ok(
-  overviewMarkup.includes(`src="${overviewBackground}"`),
-  '一年历总览内部图片应使用当天神谕 speaker 对应的 oracle 图片',
+  overviewMarkup.includes(`src="${OMPHALOS_YEAR_OVERVIEW_IMAGE}"`),
+  '一年历总览内部图片应恢复为原来的昔涟德谬歌卡片',
+);
+assert.equal(
+  OMPHALOS_YEAR_OVERVIEW_IMAGE,
+  '/assets/omphalos/eggs/xilian-demiurge-card.jpg',
+  '一年历总览内部图片应使用用户指定的 JPG 图二',
 );
 
 console.log('神谕 speaker 别名、默认背景、开拓者轮替和素材完整性检查通过。');

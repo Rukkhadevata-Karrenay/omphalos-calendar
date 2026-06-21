@@ -11,6 +11,7 @@ import {
   type OmphalosMonth,
 } from './data/omphalosMonths';
 import { hasMonthButtonLayoutConfig } from './data/monthButtonLayoutConfig';
+import { getOracleBackground } from './data/oracleBackgrounds';
 import {
   OMPHALOS_DAY_MONTH,
   getOmphalosDayDateKey,
@@ -19,6 +20,7 @@ import {
 import { useEvents } from './hooks/useEvents';
 import { useCurrentTime } from './hooks/useCurrentTime';
 import { formatDate, getOmphalosDate, toDateKey } from './utils/date';
+import { getDailyQuote } from './utils/dailyQuote';
 
 type Route =
   | { view: 'home' }
@@ -100,10 +102,18 @@ export default function App() {
   }, [currentMonth.gregorianMonth, monthEvents, omphalosDayEvent]);
 
   const omphalosDate = getOmphalosDate(now);
+  const dailyQuote = getDailyQuote(now, omphalosDate.month.order);
+  const oracleBackground = getOracleBackground(
+    dailyQuote.speaker,
+    `${toDateKey(now)}:${dailyQuote.id}`,
+  );
   const usesComposedMonthLayout = hasMonthButtonLayoutConfig(currentMonth.gregorianMonth);
 
   return (
-    <div className="app">
+    <div
+      className="app"
+      style={{ '--app-background-image': `url(${oracleBackground})` } as React.CSSProperties}
+    >
       <header className="topbar">
         <button type="button" className="brand-button" onClick={() => setRoute({ view: 'home' })}>
           <span>翁法罗斯一年历</span>

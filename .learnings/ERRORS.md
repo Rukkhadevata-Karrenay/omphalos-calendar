@@ -26,6 +26,58 @@
 
 ---
 
+## [ERR-20260621-004] browser-plugin-version-and-metadata
+
+**Logged**: 2026-06-21T03:18:00+08:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+浏览器插件缓存版本再次变化，更新路径后应用内浏览器又因缺少 sandboxPolicy 元数据无法启动。
+
+### Error
+`No such file or directory: browser/26.616.32156/...`；`missing field sandboxPolicy`
+
+### Suggested Fix
+每轮从当前缓存定位浏览器插件版本；若浏览器 MCP 后端元数据缺失，在完成强制技能检查后改用本地 Playwright CLI 验收。
+
+### Metadata
+- Reproducible: environment-dependent
+- Related Files: browser plugin runtime
+
+### Resolution
+- **Resolved**: 2026-06-21T03:20:00+08:00
+- **Notes**: 使用当前插件说明并切换到本地 Playwright CLI，完成同等 DOM 与截图验收。
+
+---
+
+## [ERR-20260621-005] playwright-cli-run-code-shape
+
+**Logged**: 2026-06-21T03:22:00+08:00
+**Priority**: low
+**Status**: resolved
+**Area**: tooling
+
+### Summary
+Playwright CLI `run-code` 参数需要是接收 page 的函数，直接传语句或顶层 await 会解析失败。
+
+### Error
+`SyntaxError: Unexpected token 'const'`；`ReferenceError: await is not defined`
+
+### Suggested Fix
+统一传入 `async (page) => { ... }`，需要读取结果时显式 return。
+
+### Metadata
+- Reproducible: yes
+- Related Files: Playwright CLI validation command
+
+### Resolution
+- **Resolved**: 2026-06-21T03:23:00+08:00
+- **Notes**: 改为异步函数后完成七个响应式宽度批量检查。
+
+---
+
 ## [ERR-20260621-002] tsx-react-server-render
 
 **Logged**: 2026-06-21T01:18:00+08:00

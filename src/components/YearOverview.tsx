@@ -1,5 +1,6 @@
 import {
   OMPHALOS_MONTHS,
+  OMPHALOS_YEAR_OVERVIEW_IMAGE,
   type OmphalosMonth,
 } from '../data/omphalosMonths';
 import { getOracleBackground } from '../data/oracleBackgrounds';
@@ -30,7 +31,7 @@ export const YearOverview = ({ now, year, events, onSelectMonth }: YearOverviewP
       style={{ '--year-overview-image': `url(${oracleBackground})` } as React.CSSProperties}
     >
       <section className="section-heading year-hero-panel">
-        <img src={oracleBackground} alt={`${dailyQuote.speaker}今日神谕背景`} />
+        <img src={OMPHALOS_YEAR_OVERVIEW_IMAGE} alt="昔涟德谬歌月份预览卡" />
         <div>
           <span className="eyebrow">Year Overview</span>
           <h1>翁法罗斯一年历总览</h1>
