@@ -9,3 +9,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.zip
+.playwright-cli/
+.learnings/
+notes/
+docs/superpowers/
+design-qa.md
